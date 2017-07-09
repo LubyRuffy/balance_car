@@ -188,7 +188,19 @@ void LED_SPI_Update(unsigned long buffer[], uint32_t length)
 
 void LED_SPI_SendBits(uint8_t bits)
 {
-    int zero = 0x7000;  //111000000000000
+
+
+
+
+
+
+
+
+
+
+
+
+	int zero = 0x7000;  //111000000000000
     int one = 0xFF00;  //0x7f00和oxff00一样效果
     int i = 0x00;
 

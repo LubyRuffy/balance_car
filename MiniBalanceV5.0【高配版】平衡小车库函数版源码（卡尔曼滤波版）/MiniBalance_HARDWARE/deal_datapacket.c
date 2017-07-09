@@ -80,7 +80,7 @@ void importData(u8 res)
 			else
 			{
 				RcvStatus=0;
-								rxcnt=0;
+				rxcnt=0;
 				errcopy(rxbuf,errbufs[err_cnt%30],9);
 				err_cnt++;
 				;//校验不成功指示灯

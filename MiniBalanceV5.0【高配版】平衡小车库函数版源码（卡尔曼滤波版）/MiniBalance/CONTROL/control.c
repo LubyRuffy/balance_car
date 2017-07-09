@@ -30,7 +30,7 @@ int EXTI15_10_IRQHandler(void)
 		  if(Flag_Target==1)                                                  //5ms读取一次陀螺仪和加速度计的值，更高的采样频率可以改善卡尔曼滤波和互补滤波的效果
 			{
 				Get_Angle(Way_Angle);                                               //===更新姿态	
-				Get_MC6();                                                        	//===读取航模遥控器的数据					
+			//	Get_MC6();                                                        	//===读取航模遥控器的数据					
 				if(++Flash_R_Count<=250&&Angle_Balance>30)Flash_Read();             //=====读取Flash的PID参数		
 				Voltage_Temp=Get_battery_volt();		                                //=====读取电池电压		
 				Voltage_Count++;                                                    //=====平均值计数器
@@ -71,10 +71,10 @@ int balance(float Angle,float Gyro)
 {  
    float Bias;
 	 int balance;
-	Zhongzhi=-6;
+	Zhongzhi=-5;
 	 Bias=Angle-Zhongzhi;                       //===求出平衡的角度中值 和机械相关
 	//float Balance_Kp=300,Balance_Kd=1
-	 balance=350*Bias+Gyro*1.2;   //===计算平衡控制的电机PWM  PD控制   kp是P系数 kd是D系数 
+	 balance=(350+5)*Bias+Gyro*(1.2-0.3);   //===计算平衡控制的电机PWM  PD控制   kp是P系数 kd是D系数 
 	 return balance;
 }
 
@@ -115,7 +115,7 @@ int velocity(int encoder_left,int encoder_right)
 		
 		//Velocity_Kp=80,Velocity_Ki=0.4;//PID参数
 		
-		Velocity=Encoder*90+Encoder_Integral*0.5;        	//===速度控制	
+		Velocity=Encoder*(90+20+4)+Encoder_Integral*(0.5+0.1);        	//===速度控制	
 
 		if(Flag_Hover==1)Zhongzhi=-Encoder/10-Encoder_Integral/300;       //这些斜坡悬停使用的算法
 		
@@ -217,7 +217,7 @@ void Key(void)
 u8 Turn_Off(float angle, int voltage)
 {
 	    u8 temp;
-			if(angle<(-50+Zhongzhi)||angle>(50+Zhongzhi)||1==Flag_Stop||voltage<1110)//电池电压低于11.1V关闭电机
+			if(angle<(-55+Zhongzhi)||angle>(55+Zhongzhi)||1==Flag_Stop||voltage<1110)//电池电压低于11.1V关闭电机
 			{	                                                 //===倾角大于40度关闭电机
       temp=1;                                            //===Flag_Stop置1关闭电机
 			AIN1=0;                                            
