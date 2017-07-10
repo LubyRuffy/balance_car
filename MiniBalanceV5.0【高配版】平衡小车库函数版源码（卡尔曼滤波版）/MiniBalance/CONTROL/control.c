@@ -12,6 +12,8 @@ int Balance_Pwm,Velocity_Pwm,Turn_Pwm;
 u8 Flag_Target;
 u32 Flash_R_Count;
 int Voltage_Temp,Voltage_Count,Voltage_All;
+u8 lose_control=0;   //0未掉连接  1：掉连接
+u8 Angle_is_too_large=0;
 /**************************************************************************
 函数功能：所有的控制代码都在这里面
          5ms定时中断由MPU6050的INT引脚触发
@@ -53,10 +55,31 @@ int EXTI15_10_IRQHandler(void)
 		//	if(Put_Down(Angle_Balance,Encoder_Left,Encoder_Right))              //===检查是否小车被放下
 			Flag_Stop=0;	                                                      //===如果被放下就启动电机
       if(Turn_Off(Angle_Balance,Voltage)==0)                              //===如果不存在异常
- 			Set_Pwm(Moto1,Moto2);                                               //===赋值给PWM寄存器
+				Set_Pwm(Moto1,Moto2);                                               //===赋值给PWM寄存器
+			else																														//如果存在异常
+			{
+				if(Angle_is_too_large==1)//判断是否到底并且尝试起立
+				{
+					if(Flag_Qian==1)
+					{
+						Moto1=-8300,Moto2=-8300;
+						Set_Pwm(Moto1,Moto2);
+					}
+					if(Flag_Hou==1)
+					{
+						Moto1=8300,	Moto2= 8300;
+						Set_Pwm(Moto1,Moto2);
+					}
+					      
+				}
+			}
   		if(Bi_zhang==0)Led_Flash(100);                                      //===LED闪烁;常规模式 1s改变一次指示灯的状态	
 			else           Led_Flash(0);                                        //===LED闪烁;超声波模式 指示灯常亮	
-			Key();                                                              //===扫描按键状态 单击双击可以改变小车运行状态			
+			Connection_test();																									//通信连接测试
+			Key();                                                              //===扫描按键状态 单击双击可以改变小车运行状态	
+
+			WS2811_Update();																										//更新灯色
+
 	}       	
 	 return 0;	  
 } 
@@ -109,7 +132,21 @@ int velocity(int encoder_left,int encoder_right)
 		Encoder += Encoder_Least*0.2f;	                                    //===一阶低通滤波器    
 		Encoder_Integral +=Encoder;                                       	//===积分出位移 积分时间：10ms
 		Encoder_Integral=Encoder_Integral-Movement;                      	 	//===接收遥控器数据，控制前进后退
-		int jifenshangxian=12000;//原本为10000
+		int jifenshangxian=15000;//原本为10000
+		
+		if(rxbuf[2]==4) 
+		{
+			jifenshangxian=17000;
+			if(lose_control==0)
+				SetColor_Priority(0xFF000FF,3);//疯狗模式 指示灯
+		}
+		else 
+		{
+			jifenshangxian=13000;
+			if(lose_control==0)
+				SetColor_Priority(0x00FFFF,3);//低速模式 指示灯
+		}
+		
 		if(Encoder_Integral>jifenshangxian)  	Encoder_Integral=jifenshangxian;             	//===积分限幅
 		if(Encoder_Integral<-jifenshangxian)	Encoder_Integral=-jifenshangxian;             		//===积分限幅	
 		
@@ -214,19 +251,33 @@ void Key(void)
 入口参数：倾角和电压
 返回  值：1：异常  0：正常
 **************************************************************************/
+u8 power_flag=0;
 u8 Turn_Off(float angle, int voltage)
 {
 	    u8 temp;
 			if(angle<(-55+Zhongzhi)||angle>(55+Zhongzhi)||1==Flag_Stop||voltage<1110)//电池电压低于11.1V关闭电机
 			{	                                                 //===倾角大于40度关闭电机
-      temp=1;                                            //===Flag_Stop置1关闭电机
-			AIN1=0;                                            
-			AIN2=0;
-			BIN1=0;
-			BIN2=0;
+				temp=1;                                            //===Flag_Stop置1关闭电机
+				AIN1=0;                                            
+				AIN2=0;
+				BIN1=0;
+				BIN2=0;
+				if(angle<(-55+Zhongzhi)||angle>(55+Zhongzhi))//倾角过大
+				{
+					Angle_is_too_large=1;  //
+				}
+				if(voltage<1110)
+				{					
+					SetColor_Priority(0xFFFFFF,0);//电源不足 指示灯
+					power_flag=1;
+				}
       }
 			else
-      temp=0;
+			{
+				temp=0;
+				power_flag=0;
+				Angle_is_too_large=0;
+			}
       return temp;			
 }
 	
@@ -370,36 +421,44 @@ void  Get_MC6(void)
 u8 dataPID_Last = 250;//保存上一次收到的数据包PID
 void Connection_test(void)
 {
+	static u8 cnt=0;
 	static u8 err_cnt=0;
 	if(dataPID_Last == dataPID)     //表明已经和遥控器失去连接，当然也可能是误包导致包舍弃
 	{
 			err_cnt++;
-			if(err_cnt>=5)//如果连续若干次都是判定失去连接，则真的失去连接
+			if(err_cnt>=60)///果连续若干次都是判定失去连接，则真的失去连接
   		{
 				Flag_Qian=0,Flag_Hou=0,Flag_Left=0,Flag_Right=0;//////////////刹车
-		
-				static u8 flag;	
-				if(flag)
+				lose_control=1;
+				cnt=0;
+				if(power_flag!=1)//首先确保电源有电，无电则不显示通讯是否连接的指示灯，显示白色
 				{
-					unsigned long color=0xFF00000;
-					LED_SPI_Update(&color,1);//与遥控器连接失败  指示灯
-					flag=0;
-				}
-				else
-				{
-					unsigned long color=0x0000000;
-					LED_SPI_Update(&color,1);//与遥控器连接失败  指示灯
-					flag=1;
-				}
-				
-				err_cnt=0;
-				
+					static u8 flag;	
+					if(flag)
+					{
+						SetColor_Priority(0xFF00000,1);//与遥控器连接失败  指示灯
+						flag=0;
+					}
+					else
+					{
+						SetColor_Priority(0x0000000,1);//与遥控器连接失败  指示灯
+						flag=1;
+					}
+				}		
+				err_cnt=0;			
 			}
 	}
 	else
 	{
 			err_cnt=0;
 			dataPID_Last = dataPID;//与遥控器通讯正常，覆盖掉原来的值
+			lose_control=0;
+			if(cnt<1)//正常通讯则只执行一次
+			{
+				cnt++;
+
+			//	SetColor_Priority(0x0000000,1);//与遥控器连接  指示灯
+			}
 	}
 }
 

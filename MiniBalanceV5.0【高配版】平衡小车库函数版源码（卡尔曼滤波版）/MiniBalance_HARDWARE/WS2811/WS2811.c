@@ -1,12 +1,9 @@
 #include "WS2811.h"
 
 /**********************说明*****************************
-调用LED_SPI_LowLevel_Init初始化之后,
-只需在main()中调用LED_SPI_Update(unsigned long buffer[], uint32_t length),
-第一个形参为颜色代码，3字节，分别是R,G,B
-第二个是串联的灯数量，一般为1
 
-如果多灯珠，需要用到void WS_SetAll(void)和Wsdat[]等等,这里不做介绍。
+
+如果多灯珠，需要用到void WS_SetAll(void)和Wsdat[]等等
 *******************************************************/
 
 uint16_t PixelBuffer[328] = {0};
@@ -17,7 +14,16 @@ unsigned long WsDat[nWs]={0xFF0000,0xFF0000,0xFF0000,
 													0xFF0000,0xFF0000,0xFF0000,
 													0xFF0000,0xFF0000,0xFF0000};
 													
-
+//存放颜色以及优先级
+unsigned long Color_Data[50][2]={0};		
+int color_cnt=0;
+//颜色  、权限								
+void SetColor_Priority(int color,int priority)
+{
+	Color_Data[color_cnt][0]=color;
+	Color_Data[color_cnt][1]=priority;
+	color_cnt++;
+}	
 void WS2811_Breath()
 {
 		const static u8 brightness = 255;
@@ -146,7 +152,17 @@ void WS_SetAll()
 
 }
 
-
+void WS2811_Update()
+{
+	int max_priority=0;
+	for(int i=0;i<color_cnt;i++)
+	{
+		if(Color_Data[i][1]<Color_Data[max_priority][1])
+			max_priority=i;
+	}
+	LED_SPI_Update(&Color_Data[max_priority][0],1);
+	color_cnt=0;
+}
 void LED_SPI_Update(unsigned long buffer[], uint32_t length)
 {
     uint8_t i = 0;
@@ -188,18 +204,6 @@ void LED_SPI_Update(unsigned long buffer[], uint32_t length)
 
 void LED_SPI_SendBits(uint8_t bits)
 {
-
-
-
-
-
-
-
-
-
-
-
-
 	int zero = 0x7000;  //111000000000000
     int one = 0xFF00;  //0x7f00和oxff00一样效果
     int i = 0x00;

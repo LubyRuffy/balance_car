@@ -370,7 +370,7 @@
             <vShortEn>0</vShortEn>
             <vShortWch>0</vShortWch>
             <VariousControls>
-              <MiscControls></MiscControls>
+              <MiscControls>--c99</MiscControls>
               <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
               <IncludePath>..\CORE;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\FWLIB\inc;..\MiniBalance\CONTROL;..\MiniBalance\DataScope_DP;..\MiniBalance\filter;..\MiniBalance\show;..\MiniBalance_HARDWARE\ADC;..\MiniBalance_HARDWARE\CAN;..\MiniBalance_HARDWARE\ENCODER;..\MiniBalance_HARDWARE\EXTI;..\MiniBalance_HARDWARE\KEY;..\MiniBalance_HARDWARE\LED;..\MiniBalance_HARDWARE\MOTOR;..\MiniBalance_HARDWARE\NRF24L01;..\MiniBalance_HARDWARE\OLED;..\MiniBalance_HARDWARE\SPI;..\MiniBalance_HARDWARE\STMFLASH;..\MiniBalance_HARDWARE\TIMER;..\MiniBalance_HARDWARE\USARTX;..\MiniBalance_HARDWARE\IIC;..\MiniBalance\MPU6050;..\MiniBalance\DMP;..\MiniBalance_HARDWARE\DataScope;..\MiniBalance_HARDWARE\WS2811;..\MiniBalance_HARDWARE</IncludePath>

@@ -23,6 +23,11 @@
 #include "can.h"
 #include "WS2811.h"
 #include "control.h"
+
+
+
+
+
 #define SYSTEM_SUPPORT_OS		0		//定义系统文件夹是否支持UCOS
 extern u8 Way_Angle;                                      //获取角度的算法，1：四元数  2：卡尔曼  3：互补滤波
 extern int Encoder_Left,Encoder_Right;                     //左右编码器的脉冲计数

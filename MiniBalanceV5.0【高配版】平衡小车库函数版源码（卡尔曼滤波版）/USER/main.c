@@ -74,8 +74,9 @@ int main(void)
 				}	
 				delay_flag=1;	
 				delay_50=0;
-				Connection_test();
-	//			WS2811_Breath();
+				
+				
+
 				while(delay_flag);	     //通过MPU6050的INT中断实现的50ms精准延时	
 	}
 }
