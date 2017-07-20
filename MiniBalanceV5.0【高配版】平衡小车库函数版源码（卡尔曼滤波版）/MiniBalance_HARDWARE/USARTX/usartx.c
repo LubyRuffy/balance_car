@@ -54,7 +54,12 @@ void uart2_init(u32 bound)
 
 }
 
-
+void USART2_SendByByter(u8 Data)
+{
+	USART_GetFlagStatus(USART2, USART_FLAG_TC);	
+	USART_SendData(USART2, Data);
+	while (USART_GetFlagStatus(USART2, USART_FLAG_TC) == RESET);	
+}
 
 	
 /**************************************************************************

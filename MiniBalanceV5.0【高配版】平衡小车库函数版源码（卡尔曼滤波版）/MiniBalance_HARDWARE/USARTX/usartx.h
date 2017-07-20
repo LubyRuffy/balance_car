@@ -8,5 +8,6 @@
 extern u8 Usart2_Receive;
 void uart2_init(u32 bound);
 void USART2_IRQHandler(void);
+void USART2_SendByByter(u8 Data);
 #endif
 

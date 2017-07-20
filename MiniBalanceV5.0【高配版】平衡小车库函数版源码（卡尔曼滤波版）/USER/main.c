@@ -53,6 +53,8 @@ int main(void)
 	LED_SPI_LowLevel_Init();
 	MiniBalance_EXTI_Init();        //=====外部中断初始化
 	
+	
+
 	RCC_ClocksTypeDef clocks;
 	RCC_GetClocksFreq(&clocks);
 	
@@ -76,7 +78,7 @@ int main(void)
 				delay_50=0;
 				
 				
-
+			//	printf("%d",Voltage);
 				while(delay_flag);	     //通过MPU6050的INT中断实现的50ms精准延时	
 	}
 }

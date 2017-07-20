@@ -37,7 +37,8 @@ int EXTI15_10_IRQHandler(void)
 				Voltage_Temp=Get_battery_volt();		                                //=====读取电池电压		
 				Voltage_Count++;                                                    //=====平均值计数器
 				Voltage_All+=Voltage_Temp;                                          //=====多次采样累积
-				if(Voltage_Count==100) Voltage=Voltage_All/100,Voltage_All=0,Voltage_Count=0;//=====求平均值		
+				if(Voltage_Count==100) Voltage=Voltage_All/100,Voltage_All=0,Voltage_Count=0,
+					PackData();//=====求平均值		
 				return 0;	                                               
 			}                                                                   //10ms控制一次，为了保证M法测速的时间基准，首先读取编码器数据
 			Encoder_Left=Read_Encoder(2);                                    		//===读取编码器的值
@@ -46,9 +47,14 @@ int EXTI15_10_IRQHandler(void)
 			Read_Distane();                                                			//===获取超声波测量距离值
  			Balance_Pwm =balance(Angle_Balance,Gyro_Balance);                   //===平衡PID控制	
 	    Velocity_Pwm=velocity(Encoder_Left,Encoder_Right);                  //===速度环PID控制	 记住，速度反馈是正反馈，就是小车快的时候要慢下来就需要再跑快一点
- 	    Turn_Pwm    =turn(Encoder_Left,Encoder_Right,Gyro_Turn);          	//===转向环PID控制     
+ 	    Turn_Pwm    =turn(Encoder_Left,Encoder_Right,Gyro_Turn);          	//===转向环PID控制    
+			
  		  Moto1=Balance_Pwm+Velocity_Pwm-Turn_Pwm;                            //===计算左轮电机最终PWM
  	  	Moto2=Balance_Pwm+Velocity_Pwm+Turn_Pwm;                            //===计算右轮电机最终PWM
+			
+			if(1==Flag_Qian) Moto1+=250;   //左轮速度补偿
+			if(1==Flag_Hou)  Moto1-=250;
+			
    		Xianfu_Pwm();                                                       //===PWM限幅
 		//if(Pick_Up(Acceleration_Z,Angle_Balance,Encoder_Left,Encoder_Right))//===检查是否小车被那起
 		//	Flag_Stop=1;	                                                      //===如果被拿起就关闭电机
@@ -62,12 +68,12 @@ int EXTI15_10_IRQHandler(void)
 				{
 					if(Flag_Qian==1)
 					{
-						Moto1=-8300,Moto2=-8300;
+						Moto1=-75000,Moto2=-7500;
 						Set_Pwm(Moto1,Moto2);
 					}
 					if(Flag_Hou==1)
 					{
-						Moto1=8300,	Moto2= 8300;
+						Moto1=7000,	Moto2= 7000;
 						Set_Pwm(Moto1,Moto2);
 					}
 					      
@@ -77,7 +83,7 @@ int EXTI15_10_IRQHandler(void)
 			else           Led_Flash(0);                                        //===LED闪烁;超声波模式 指示灯常亮	
 			Connection_test();																									//通信连接测试
 			Key();                                                              //===扫描按键状态 单击双击可以改变小车运行状态	
-
+			
 			WS2811_Update();																										//更新灯色
 
 	}       	
@@ -94,7 +100,7 @@ int balance(float Angle,float Gyro)
 {  
    float Bias;
 	 int balance;
-	Zhongzhi=-5;
+	Zhongzhi=-6;
 	 Bias=Angle-Zhongzhi;                       //===求出平衡的角度中值 和机械相关
 	//float Balance_Kp=300,Balance_Kd=1
 	 balance=(350+5)*Bias+Gyro*(1.2-0.3);   //===计算平衡控制的电机PWM  PD控制   kp是P系数 kd是D系数 
@@ -134,7 +140,7 @@ int velocity(int encoder_left,int encoder_right)
 		Encoder_Integral=Encoder_Integral-Movement;                      	 	//===接收遥控器数据，控制前进后退
 		int jifenshangxian=15000;//原本为10000
 		
-		if(rxbuf[2]==4) 
+		if(!Bottom_4) 
 		{
 			jifenshangxian=17000;
 			if(lose_control==0)
@@ -151,8 +157,9 @@ int velocity(int encoder_left,int encoder_right)
 		if(Encoder_Integral<-jifenshangxian)	Encoder_Integral=-jifenshangxian;             		//===积分限幅	
 		
 		//Velocity_Kp=80,Velocity_Ki=0.4;//PID参数
+		if(Bottom_1)  Encoder_Integral=0;
+		Velocity=Encoder*(90+20+4)+Encoder_Integral*(0.5+0.1);       	//===速度控制	
 		
-		Velocity=Encoder*(90+20+4)+Encoder_Integral*(0.5+0.1);        	//===速度控制	
 
 		if(Flag_Hover==1)Zhongzhi=-Encoder/10-Encoder_Integral/300;       //这些斜坡悬停使用的算法
 		
@@ -165,7 +172,7 @@ int velocity(int encoder_left,int encoder_right)
 /**************************************************************************
 函数功能：转向控制  修改转向速度，请修改Turn_Amplitude即可
 入口参数：左轮编码器、右轮编码器、Z轴陀螺仪
-返回  值：转向控制PWM
+返回  值：转向控制PWM                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 作    者：平衡小车之家
 **************************************************************************/
 int turn(int encoder_left,int encoder_right,float gyro)//转向控制
@@ -255,7 +262,7 @@ u8 power_flag=0;
 u8 Turn_Off(float angle, int voltage)
 {
 	    u8 temp;
-			if(angle<(-55+Zhongzhi)||angle>(55+Zhongzhi)||1==Flag_Stop||voltage<1110)//电池电压低于11.1V关闭电机
+			if(angle<(-45)||angle>(45)||1==Flag_Stop)//||voltage<1110)//电池电压低于11.1V关闭电机
 			{	                                                 //===倾角大于40度关闭电机
 				temp=1;                                            //===Flag_Stop置1关闭电机
 				AIN1=0;                                            
@@ -268,8 +275,8 @@ u8 Turn_Off(float angle, int voltage)
 				}
 				if(voltage<1110)
 				{					
-					SetColor_Priority(0xFFFFFF,0);//电源不足 指示灯
-					power_flag=1;
+					//SetColor_Priority(0xFFFFFF,1);//倒地
+					//power_flag=1;
 				}
       }
 			else

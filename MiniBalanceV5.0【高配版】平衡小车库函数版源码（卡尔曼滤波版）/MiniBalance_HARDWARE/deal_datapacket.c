@@ -9,6 +9,18 @@ u8 rxcnt=0;
 u8 RcvStatus=0;
 #define RCVLENGTH 9
 
+u8 Bottom_1=0;
+u8 Bottom_2=0;
+u8 Bottom_3=0;
+u8 Bottom_4=0;
+
+u8 Last_Bottom_1=0;
+u8 Last_Bottom_2=0;
+u8 Last_Bottom_3=0;
+u8 Last_Bottom_4=0;
+
+u8 senddata[5];
+
 void UnpackData()
 {
 	
@@ -31,6 +43,28 @@ void UnpackData()
 		Flag_Left=0,Flag_Right=0;
  
 	dataPID=rxbuf[7];
+	
+	if((rxbuf[2]&0x01)!=Last_Bottom_1)
+		Bottom_1=1;
+	else Bottom_1=0;
+	
+	if((rxbuf[2]&0x02)!=Last_Bottom_2)
+		Bottom_2=1;
+	else Bottom_2=0;
+	
+	if((rxbuf[2]&0x04)!=Last_Bottom_3)
+		Bottom_3=1;
+	else Bottom_4=0;
+	
+	if((rxbuf[2]&0x08))
+		Bottom_4=1;
+	else Bottom_4=0;
+	
+	Last_Bottom_1=rxbuf[2]&0x01;
+	Last_Bottom_2=rxbuf[2]&0x02;
+	Last_Bottom_3=rxbuf[2]&0x04;
+	Last_Bottom_4=rxbuf[2]&0x08;
+	
 }
 
 u8 CheckSum(u8* data,u8 length,u8 checkCode)
@@ -89,4 +123,15 @@ void importData(u8 res)
 	}
 }
 
+
+void  PackData()
+{
+	senddata[0]=0xAA;
+	senddata[1]=*((u8*)&Voltage);
+	senddata[2]=*(((u8*)&Voltage)+1);
+	senddata[3]=*(((u8*)&Voltage)+2);
+	senddata[4]=*(((u8*)&Voltage)+3);
+	for(u8 i=0;i<5;i++)
+		USART2_SendByByter(senddata[i]);
+}
 
