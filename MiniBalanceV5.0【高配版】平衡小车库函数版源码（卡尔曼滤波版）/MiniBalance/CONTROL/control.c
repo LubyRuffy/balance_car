@@ -142,13 +142,13 @@ int velocity(int encoder_left,int encoder_right)
 		
 		if(!Bottom_4) 
 		{
-			jifenshangxian=17000;
+			jifenshangxian=34000;
 			if(lose_control==0)
 				SetColor_Priority(0xFF000FF,3);//疯狗模式 指示灯
 		}
 		else 
 		{
-			jifenshangxian=13000;
+			jifenshangxian=26000;
 			if(lose_control==0)
 				SetColor_Priority(0x00FFFF,3);//低速模式 指示灯
 		}
@@ -158,7 +158,7 @@ int velocity(int encoder_left,int encoder_right)
 		
 		//Velocity_Kp=80,Velocity_Ki=0.4;//PID参数
 		if(Bottom_1)  Encoder_Integral=0;
-		Velocity=Encoder*(90+20+4)+Encoder_Integral*(0.5+0.1);       	//===速度控制	
+		Velocity=Encoder*(90+20+4)+Encoder_Integral*(0.3);       	//===速度控制	
 		
 
 		if(Flag_Hover==1)Zhongzhi=-Encoder/10-Encoder_Integral/300;       //这些斜坡悬停使用的算法

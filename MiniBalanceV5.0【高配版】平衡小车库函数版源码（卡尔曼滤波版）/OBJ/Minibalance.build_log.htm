@@ -27,14 +27,21 @@ Project File Date:  07/10/2017
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 (build 20)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'MinibalanceF4'
-"..\OBJ\Minibalance.axf" - 0 Error(s), 0 Warning(s).
+compiling control.c...
+..\MiniBalance\CONTROL\control.c(161): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		Velocity=Encoder*(90+20+4)+Encoder_Integral*(0.3);       	//===?Ù¶È¿???	
+..\MiniBalance\CONTROL\control.c: 1 warning, 0 errors
+linking...
+Program Size: Code=57966 RO-data=6690 RW-data=600 ZI-data=4312  
+FromELF: creating hex file...
+"..\OBJ\Minibalance.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   C:\Users\Pei\Documents\GitHub\balance_car\MiniBalanceV5.0¡¾¸ßÅä°æ¡¿Æ½ºâÐ¡³µ¿âº¯Êý°æÔ´Âë£¨¿¨¶ûÂüÂË²¨°æ£©\USER\RTE
   C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>
