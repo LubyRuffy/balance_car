@@ -10,7 +10,6 @@
       <TargetName>MinibalanceF4</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060020::V5.06 (build 20)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F405RG</Device>
@@ -85,8 +84,6 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
-            <nStopA1X>0</nStopA1X>
-            <nStopA2X>0</nStopA2X>
           </AfterMake>
           <SelectedForBatchBuild>0</SelectedForBatchBuild>
           <SVCSIdString></SVCSIdString>
@@ -148,6 +145,7 @@
             <RestoreToolbox>1</RestoreToolbox>
             <RestoreTracepoints>1</RestoreTracepoints>
             <RestoreSysVw>1</RestoreSysVw>
+            <UsePdscDebugDescription>1</UsePdscDebugDescription>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
           <TargetSelection>11</TargetSelection>
@@ -230,7 +228,6 @@
             <useUlib>0</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
-            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -365,12 +362,8 @@
             <uSurpInc>0</uSurpInc>
             <uC99>0</uC99>
             <useXO>0</useXO>
-            <v6Lang>0</v6Lang>
-            <v6LangP>0</v6LangP>
-            <vShortEn>0</vShortEn>
-            <vShortWch>0</vShortWch>
             <VariousControls>
-              <MiscControls></MiscControls>
+              <MiscControls>--c99</MiscControls>
               <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
               <IncludePath>..\CORE;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\FWLIB\inc;..\MiniBalance\CONTROL;..\MiniBalance\DataScope_DP;..\MiniBalance\filter;..\MiniBalance\show;..\MiniBalance_HARDWARE\ADC;..\MiniBalance_HARDWARE\CAN;..\MiniBalance_HARDWARE\ENCODER;..\MiniBalance_HARDWARE\EXTI;..\MiniBalance_HARDWARE\KEY;..\MiniBalance_HARDWARE\LED;..\MiniBalance_HARDWARE\MOTOR;..\MiniBalance_HARDWARE\NRF24L01;..\MiniBalance_HARDWARE\OLED;..\MiniBalance_HARDWARE\SPI;..\MiniBalance_HARDWARE\STMFLASH;..\MiniBalance_HARDWARE\TIMER;..\MiniBalance_HARDWARE\USARTX;..\MiniBalance_HARDWARE\IIC;..\MiniBalance\MPU6050;..\MiniBalance\DMP;..\MiniBalance_HARDWARE\DataScope;..\MiniBalance_HARDWARE\WS2811;..\MiniBalance_HARDWARE</IncludePath>

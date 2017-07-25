@@ -26,6 +26,9 @@ void UnpackData()
 	
 	Flag_sudu=1;//默认值
 	
+	blue =rxbuf[4];
+	green=rxbuf[5];
+	
 	//油门死区
 	if(rxbuf[4]>152)
 		Flag_Qian=1,Flag_Hou=0;//,Flag_Left=0,Flag_Right=0;//////////////前

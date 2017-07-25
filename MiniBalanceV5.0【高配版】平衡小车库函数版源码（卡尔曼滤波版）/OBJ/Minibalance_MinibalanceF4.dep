@@ -57,7 +57,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -1425,7 +1425,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -1490,7 +1490,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -1555,7 +1555,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -1620,7 +1620,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -1685,7 +1685,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -1750,7 +1750,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -1815,7 +1815,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -1880,7 +1880,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -1945,7 +1945,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -2010,7 +2010,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -2076,7 +2076,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -2141,7 +2141,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -2149,7 +2149,7 @@ I (..\MiniBalance\DMP\dmpmap.h)(0x50CA9A0C)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x55AEF5F2)
-I (..\MiniBalance_HARDWARE\deal_datapacket.h)(0x5964C55B)
+I (..\MiniBalance_HARDWARE\deal_datapacket.h)(0x5964C55A)
 F (..\MiniBalance_HARDWARE\STMFLASH\stmflash.c)(0x5930FC9C)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\FWLIB\inc -I..\MiniBalance\CONTROL -I..\MiniBalance\DataScope_DP -I..\MiniBalance\filter -I..\MiniBalance\show -I..\MiniBalance_HARDWARE\ADC -I..\MiniBalance_HARDWARE\CAN -I..\MiniBalance_HARDWARE\ENCODER -I..\MiniBalance_HARDWARE\EXTI -I..\MiniBalance_HARDWARE\KEY -I..\MiniBalance_HARDWARE\LED -I..\MiniBalance_HARDWARE\MOTOR -I..\MiniBalance_HARDWARE\NRF24L01 -I..\MiniBalance_HARDWARE\OLED -I..\MiniBalance_HARDWARE\SPI -I..\MiniBalance_HARDWARE\STMFLASH -I..\MiniBalance_HARDWARE\TIMER -I..\MiniBalance_HARDWARE\USARTX -I..\MiniBalance_HARDWARE\IIC -I..\MiniBalance\MPU6050 -I..\MiniBalance\DMP -I..\MiniBalance_HARDWARE\DataScope -I..\MiniBalance_HARDWARE\WS2811 -I..\MiniBalance_HARDWARE --c99-I C:\Users\Pei\Documents\GitHub\balance_car\MiniBalanceV5.0¡¾¸ßÅä°æ¡¿Æ½ºâÐ¡³µ¿âº¯Êý°æÔ´Âë£¨¿¨¶ûÂüÂË²¨°æ£©\USER\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER --C99-o ..\obj\stmflash.o --omf_browse ..\obj\stmflash.crf --depend ..\obj\stmflash.d)
 I (..\MiniBalance_HARDWARE\STMFLASH\stmflash.h)(0x592EC9C0)
 I (..\SYSTEM\sys\sys.h)(0x59623330)
@@ -2207,7 +2207,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -2272,7 +2272,7 @@ I (..\MiniBalance_HARDWARE\NRF24L01\24l01.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -2337,7 +2337,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -2402,7 +2402,7 @@ I (..\MiniBalance_HARDWARE\NRF24L01\24l01.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -2467,7 +2467,7 @@ I (..\MiniBalance_HARDWARE\NRF24L01\24l01.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -2511,8 +2511,8 @@ I (..\FWLIB\inc\stm32f4xx_can.h)(0x5710F350)
 I (..\FWLIB\inc\stm32f4xx_dac.h)(0x5710F350)
 I (..\FWLIB\inc\stm32f4xx_dcmi.h)(0x5710F350)
 I (..\FWLIB\inc\stm32f4xx_fsmc.h)(0x5710F350)
-F (..\MiniBalance_HARDWARE\deal_datapacket.c)(0x5964C55B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\FWLIB\inc -I..\MiniBalance\CONTROL -I..\MiniBalance\DataScope_DP -I..\MiniBalance\filter -I..\MiniBalance\show -I..\MiniBalance_HARDWARE\ADC -I..\MiniBalance_HARDWARE\CAN -I..\MiniBalance_HARDWARE\ENCODER -I..\MiniBalance_HARDWARE\EXTI -I..\MiniBalance_HARDWARE\KEY -I..\MiniBalance_HARDWARE\LED -I..\MiniBalance_HARDWARE\MOTOR -I..\MiniBalance_HARDWARE\NRF24L01 -I..\MiniBalance_HARDWARE\OLED -I..\MiniBalance_HARDWARE\SPI -I..\MiniBalance_HARDWARE\STMFLASH -I..\MiniBalance_HARDWARE\TIMER -I..\MiniBalance_HARDWARE\USARTX -I..\MiniBalance_HARDWARE\IIC -I..\MiniBalance\MPU6050 -I..\MiniBalance\DMP -I..\MiniBalance_HARDWARE\DataScope -I..\MiniBalance_HARDWARE\WS2811 -I..\MiniBalance_HARDWARE --c99-I C:\Users\Pei\Documents\GitHub\balance_car\MiniBalanceV5.0¡¾¸ßÅä°æ¡¿Æ½ºâÐ¡³µ¿âº¯Êý°æÔ´Âë£¨¿¨¶ûÂüÂË²¨°æ£©\USER\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER --C99-o ..\obj\deal_datapacket.o --omf_browse ..\obj\deal_datapacket.crf --depend ..\obj\deal_datapacket.d)
-I (..\MiniBalance_HARDWARE\deal_datapacket.h)(0x5964C55B)
+F (..\MiniBalance_HARDWARE\deal_datapacket.c)(0x5974CF36)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\FWLIB\inc -I..\MiniBalance\CONTROL -I..\MiniBalance\DataScope_DP -I..\MiniBalance\filter -I..\MiniBalance\show -I..\MiniBalance_HARDWARE\ADC -I..\MiniBalance_HARDWARE\CAN -I..\MiniBalance_HARDWARE\ENCODER -I..\MiniBalance_HARDWARE\EXTI -I..\MiniBalance_HARDWARE\KEY -I..\MiniBalance_HARDWARE\LED -I..\MiniBalance_HARDWARE\MOTOR -I..\MiniBalance_HARDWARE\NRF24L01 -I..\MiniBalance_HARDWARE\OLED -I..\MiniBalance_HARDWARE\SPI -I..\MiniBalance_HARDWARE\STMFLASH -I..\MiniBalance_HARDWARE\TIMER -I..\MiniBalance_HARDWARE\USARTX -I..\MiniBalance_HARDWARE\IIC -I..\MiniBalance\MPU6050 -I..\MiniBalance\DMP -I..\MiniBalance_HARDWARE\DataScope -I..\MiniBalance_HARDWARE\WS2811 -I..\MiniBalance_HARDWARE --c99-I C:\Users\Pei\Documents\GitHub\balance_car\MiniBalanceV5.0¡¾¸ßÅä°æ¡¿Æ½ºâÐ¡³µ¿âº¯Êý°æÔ´Âë£¨¿¨¶ûÂüÂË²¨°æ£©\USER\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER --C99-o ..\obj\deal_datapacket.o --omf_browse ..\obj\deal_datapacket.crf --depend ..\obj\deal_datapacket.d)
+I (..\MiniBalance_HARDWARE\deal_datapacket.h)(0x5964C55A)
 I (..\USER\stm32f4xx.h)(0x5710F354)
 I (..\CORE\core_cm4.h)(0x5710F350)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
@@ -2569,7 +2569,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -2577,8 +2577,8 @@ I (..\MiniBalance\DMP\dmpmap.h)(0x50CA9A0C)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x55AEF5F2)
-F (..\MiniBalance\CONTROL\control.c)(0x59710D28)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\FWLIB\inc -I..\MiniBalance\CONTROL -I..\MiniBalance\DataScope_DP -I..\MiniBalance\filter -I..\MiniBalance\show -I..\MiniBalance_HARDWARE\ADC -I..\MiniBalance_HARDWARE\CAN -I..\MiniBalance_HARDWARE\ENCODER -I..\MiniBalance_HARDWARE\EXTI -I..\MiniBalance_HARDWARE\KEY -I..\MiniBalance_HARDWARE\LED -I..\MiniBalance_HARDWARE\MOTOR -I..\MiniBalance_HARDWARE\NRF24L01 -I..\MiniBalance_HARDWARE\OLED -I..\MiniBalance_HARDWARE\SPI -I..\MiniBalance_HARDWARE\STMFLASH -I..\MiniBalance_HARDWARE\TIMER -I..\MiniBalance_HARDWARE\USARTX -I..\MiniBalance_HARDWARE\IIC -I..\MiniBalance\MPU6050 -I..\MiniBalance\DMP -I..\MiniBalance_HARDWARE\DataScope -I..\MiniBalance_HARDWARE\WS2811 -I..\MiniBalance_HARDWARE --c99-I C:\Users\Pei\Documents\GitHub\balance_car\MiniBalanceV5.0¡¾¸ßÅä°æ¡¿Æ½ºâÐ¡³µ¿âº¯Êý°æÔ´Âë£¨¿¨¶ûÂüÂË²¨°æ£©\USER\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER --C99-o ..\obj\control.o --omf_browse ..\obj\control.crf --depend ..\obj\control.d)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+F (..\MiniBalance\CONTROL\control.c)(0x5975A142)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\FWLIB\inc -I..\MiniBalance\CONTROL -I..\MiniBalance\DataScope_DP -I..\MiniBalance\filter -I..\MiniBalance\show -I..\MiniBalance_HARDWARE\ADC -I..\MiniBalance_HARDWARE\CAN -I..\MiniBalance_HARDWARE\ENCODER -I..\MiniBalance_HARDWARE\EXTI -I..\MiniBalance_HARDWARE\KEY -I..\MiniBalance_HARDWARE\LED -I..\MiniBalance_HARDWARE\MOTOR -I..\MiniBalance_HARDWARE\NRF24L01 -I..\MiniBalance_HARDWARE\OLED -I..\MiniBalance_HARDWARE\SPI -I..\MiniBalance_HARDWARE\STMFLASH -I..\MiniBalance_HARDWARE\TIMER -I..\MiniBalance_HARDWARE\USARTX -I..\MiniBalance_HARDWARE\IIC -I..\MiniBalance\MPU6050 -I..\MiniBalance\DMP -I..\MiniBalance_HARDWARE\DataScope -I..\MiniBalance_HARDWARE\WS2811 -I..\MiniBalance_HARDWARE --c99-I C:\Users\Pei\Documents\GitHub\balance_car\MiniBalanceV5.0¡¾¸ßÅä°æ¡¿Æ½ºâÐ¡³µ¿âº¯Êý°æÔ´Âë£¨¿¨¶ûÂüÂË²¨°æ£©\USER\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER --C99-o ..\obj\control.o --omf_browse ..\obj\control.crf --depend ..\obj\control.d)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\SYSTEM\sys\sys.h)(0x59623330)
 I (..\USER\stm32f4xx.h)(0x5710F354)
 I (..\CORE\core_cm4.h)(0x5710F350)
@@ -2643,7 +2643,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x55AEF5F2)
 I (..\MiniBalance\filter\filter.h)(0x5704A854)
-I (..\MiniBalance_HARDWARE\deal_datapacket.h)(0x5964C55B)
+I (..\MiniBalance_HARDWARE\deal_datapacket.h)(0x5964C55A)
 F (..\MiniBalance\DataScope_DP\DataScope_DP.C)(0x559E0F22)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\FWLIB\inc -I..\MiniBalance\CONTROL -I..\MiniBalance\DataScope_DP -I..\MiniBalance\filter -I..\MiniBalance\show -I..\MiniBalance_HARDWARE\ADC -I..\MiniBalance_HARDWARE\CAN -I..\MiniBalance_HARDWARE\ENCODER -I..\MiniBalance_HARDWARE\EXTI -I..\MiniBalance_HARDWARE\KEY -I..\MiniBalance_HARDWARE\LED -I..\MiniBalance_HARDWARE\MOTOR -I..\MiniBalance_HARDWARE\NRF24L01 -I..\MiniBalance_HARDWARE\OLED -I..\MiniBalance_HARDWARE\SPI -I..\MiniBalance_HARDWARE\STMFLASH -I..\MiniBalance_HARDWARE\TIMER -I..\MiniBalance_HARDWARE\USARTX -I..\MiniBalance_HARDWARE\IIC -I..\MiniBalance\MPU6050 -I..\MiniBalance\DMP -I..\MiniBalance_HARDWARE\DataScope -I..\MiniBalance_HARDWARE\WS2811 -I..\MiniBalance_HARDWARE --c99-I C:\Users\Pei\Documents\GitHub\balance_car\MiniBalanceV5.0¡¾¸ßÅä°æ¡¿Æ½ºâÐ¡³µ¿âº¯Êý°æÔ´Âë£¨¿¨¶ûÂüÂË²¨°æ£©\USER\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER --C99-o ..\obj\datascope_dp.o --omf_browse ..\obj\datascope_dp.crf --depend ..\obj\datascope_dp.d)
 I (..\MiniBalance\DataScope_DP\DataScope_DP.h)(0x559E0F22)
 F (..\MiniBalance\filter\filter.c)(0x5927CEA0)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\FWLIB\inc -I..\MiniBalance\CONTROL -I..\MiniBalance\DataScope_DP -I..\MiniBalance\filter -I..\MiniBalance\show -I..\MiniBalance_HARDWARE\ADC -I..\MiniBalance_HARDWARE\CAN -I..\MiniBalance_HARDWARE\ENCODER -I..\MiniBalance_HARDWARE\EXTI -I..\MiniBalance_HARDWARE\KEY -I..\MiniBalance_HARDWARE\LED -I..\MiniBalance_HARDWARE\MOTOR -I..\MiniBalance_HARDWARE\NRF24L01 -I..\MiniBalance_HARDWARE\OLED -I..\MiniBalance_HARDWARE\SPI -I..\MiniBalance_HARDWARE\STMFLASH -I..\MiniBalance_HARDWARE\TIMER -I..\MiniBalance_HARDWARE\USARTX -I..\MiniBalance_HARDWARE\IIC -I..\MiniBalance\MPU6050 -I..\MiniBalance\DMP -I..\MiniBalance_HARDWARE\DataScope -I..\MiniBalance_HARDWARE\WS2811 -I..\MiniBalance_HARDWARE --c99-I C:\Users\Pei\Documents\GitHub\balance_car\MiniBalanceV5.0¡¾¸ßÅä°æ¡¿Æ½ºâÐ¡³µ¿âº¯Êý°æÔ´Âë£¨¿¨¶ûÂüÂË²¨°æ£©\USER\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER --C99-o ..\obj\filter.o --omf_browse ..\obj\filter.crf --depend ..\obj\filter.d)
@@ -2705,7 +2705,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -2770,7 +2770,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -2835,7 +2835,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)
@@ -2900,7 +2900,7 @@ I (..\MiniBalance_HARDWARE\SPI\spi.h)(0x592FED94)
 I (..\MiniBalance_HARDWARE\TIMER\timer.h)(0x58FB1FD4)
 I (..\MiniBalance_HARDWARE\CAN\can.h)(0x5930BB02)
 I (..\MiniBalance_HARDWARE\WS2811\WS2811.h)(0x59639198)
-I (..\MiniBalance\CONTROL\control.h)(0x596397D8)
+I (..\MiniBalance\CONTROL\control.h)(0x5974CDF8)
 I (..\MiniBalance\DMP\inv_mpu.h)(0x559E0F22)
 I (..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h)(0x559E0F22)
 I (..\MiniBalance\DMP\dmpKey.h)(0x50CA9A0C)

@@ -13,6 +13,8 @@ extern u8 power_flag;
 extern u8 lose_control;
 extern u8 Angle_is_too_large;
 
+extern u8 red,blue,green;
+
 int EXTI15_10_IRQHandler(void);
 int balance(float angle,float gyro);
 int velocity(int encoder_left,int encoder_right);

@@ -4,6 +4,9 @@
 #include "inv_mpu.h"
 #include "deal_datapacket.h"
 
+u8 red,blue,green;
+int rgb;
+
   /**************************************************************************
 作者：平衡小车之家
 我的淘宝小店：http://shop114407458.taobao.com/
@@ -55,7 +58,7 @@ int EXTI15_10_IRQHandler(void)
 			if(1==Flag_Qian) Moto1+=250;   //左轮速度补偿
 			if(1==Flag_Hou)  Moto1-=250;
 			
-   		Xianfu_Pwm();                                                       //===PWM限幅
+   		Xianfu_Pwm();    // max   8200                                               //===PWM限幅
 		//if(Pick_Up(Acceleration_Z,Angle_Balance,Encoder_Left,Encoder_Right))//===检查是否小车被那起
 		//	Flag_Stop=1;	                                                      //===如果被拿起就关闭电机
 		//	if(Put_Down(Angle_Balance,Encoder_Left,Encoder_Right))              //===检查是否小车被放下
@@ -68,7 +71,7 @@ int EXTI15_10_IRQHandler(void)
 				{
 					if(Flag_Qian==1)
 					{
-						Moto1=-75000,Moto2=-7500;
+						Moto1=-7500,Moto2=-7500;
 						Set_Pwm(Moto1,Moto2);
 					}
 					if(Flag_Hou==1)
@@ -84,6 +87,9 @@ int EXTI15_10_IRQHandler(void)
 			Connection_test();																									//通信连接测试
 			Key();                                                              //===扫描按键状态 单击双击可以改变小车运行状态	
 			
+			rgb=(red<<16)+(green<<8)+blue;
+			if(lose_control==0)
+				SetColor_Priority(rgb,1);
 			WS2811_Update();																										//更新灯色
 
 	}       	
@@ -142,15 +148,18 @@ int velocity(int encoder_left,int encoder_right)
 		
 		if(!Bottom_4) 
 		{
-			jifenshangxian=34000;
-			if(lose_control==0)
-				SetColor_Priority(0xFF000FF,3);//疯狗模式 指示灯
+			jifenshangxian=67500;
+			red=255;
+			//if(lose_control==0)
+				//SetColor_Priority(0xFF000FF,3);//疯狗模式 指示灯
+			
 		}
 		else 
 		{
-			jifenshangxian=26000;
-			if(lose_control==0)
-				SetColor_Priority(0x00FFFF,3);//低速模式 指示灯
+			red=0;
+			jifenshangxian=51000;
+			//if(lose_control==0)
+				//SetColor_Priority(0x00FFFF,3);//低速模式 指示灯
 		}
 		
 		if(Encoder_Integral>jifenshangxian)  	Encoder_Integral=jifenshangxian;             	//===积分限幅
@@ -158,7 +167,7 @@ int velocity(int encoder_left,int encoder_right)
 		
 		//Velocity_Kp=80,Velocity_Ki=0.4;//PID参数
 		if(Bottom_1)  Encoder_Integral=0;
-		Velocity=Encoder*(90+20+4)+Encoder_Integral*(0.3);       	//===速度控制	
+		Velocity=Encoder*(90+20+4)+Encoder_Integral*(0.2);       	//===速度控制	
 		
 
 		if(Flag_Hover==1)Zhongzhi=-Encoder/10-Encoder_Integral/300;       //这些斜坡悬停使用的算法
@@ -262,7 +271,7 @@ u8 power_flag=0;
 u8 Turn_Off(float angle, int voltage)
 {
 	    u8 temp;
-			if(angle<(-45)||angle>(45)||1==Flag_Stop)//||voltage<1110)//电池电压低于11.1V关闭电机
+			if(angle<(-55+Zhongzhi)||angle>(55+Zhongzhi)||1==Flag_Stop)//||voltage<1110)//电池电压低于11.1V关闭电机
 			{	                                                 //===倾角大于40度关闭电机
 				temp=1;                                            //===Flag_Stop置1关闭电机
 				AIN1=0;                                            
@@ -441,14 +450,17 @@ void Connection_test(void)
 				if(power_flag!=1)//首先确保电源有电，无电则不显示通讯是否连接的指示灯，显示白色
 				{
 					static u8 flag;	
+					red=0;
+					blue=0;
+					green=0;
 					if(flag)
 					{
-						SetColor_Priority(0xFF00000,1);//与遥控器连接失败  指示灯
+						SetColor_Priority(0xFF00000,0);//与遥控器连接失败  指示灯
 						flag=0;
 					}
 					else
 					{
-						SetColor_Priority(0x0000000,1);//与遥控器连接失败  指示灯
+						SetColor_Priority(0x0000000,0);//与遥控器连接失败  指示灯
 						flag=1;
 					}
 				}		
